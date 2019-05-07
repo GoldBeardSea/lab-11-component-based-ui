@@ -32,10 +32,16 @@ class Content extends React.Component {
 
   pow = e => {
     e.preventDefault();
-    let counter = Math.pow(2, this.state.counter)
+    let counter = Math.pow(2, this.state.counter);
     this.setState({counter});
     console.log(this.state);
+  }
 
+  sqrt = e => {
+    e.preventDefault();
+    let counter = Math.sqrt(this.state.counter);
+    this.setState({counter});
+    console.log(this.state);
   }
 
   render() {
@@ -45,6 +51,7 @@ class Content extends React.Component {
         <button onClick={this.decrement}> Decrement </button>
         <button onClick={this.increment} > Increment </button>
         <button onClick={this.pow} > Pow </button>
+        <button onClick={this.sqrt} > sqrt  </button>
       </div>
     );
   }
